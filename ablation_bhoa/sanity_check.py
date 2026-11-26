@@ -2,7 +2,7 @@
 sanity_check.py
 ===============
 Validasi implementasi pada dataset kecil (Breast Cancer Wisconsin, 30 fitur) SEBELUM
-eksperimen NIDS (Bab III 3.6 proposal). Memeriksa:
+eksperimen NIDS. Memeriksa:
 
   1. Populasi awal identik antar-varian untuk seed yang sama.
   2. Jumlah permintaan fitness == anggaran (persis) untuk semua varian.
