@@ -2,11 +2,11 @@
 data.py
 =======
 Pemuatan data, pembagian (split) bebas kebocoran, dan prapemrosesan berbasis
-"fitur asli" (satu bit seleksi = satu fitur asli, termasuk seluruh kolom one-hot-nya).
+fitur asli (satu bit seleksi = satu fitur asli, termasuk seluruh kolom one-hot-nya).
 
 Protokol (Bab III proposal):
-  * UNSW-NB15  : partisi resmi training (= data pengembangan) / testing (= data uji terkunci).
-                 Kolom `id` dan `attack_cat` dibuang dari prediktor (attack_cat membocorkan label).
+  * UNSW-NB15  : partisi resmi training / testing (data uji).
+                 Kolom id dan attack_cat dibuang dari prediktor (attack_cat membocorkan label).
   * CIC-IDS2017: duplikat dihapus, lalu split 70:30 terstratifikasi berbasis kelompok
                  (baris dengan vektor fitur identik berada pada partisi yang sama).
   * Seluruh transformasi (imputasi, one-hot, Min-Max) di-fit hanya pada bagian pelatihan
