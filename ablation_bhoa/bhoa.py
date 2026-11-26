@@ -1,7 +1,7 @@
 """
 bhoa.py
 =======
-Implementasi bersama (shared implementation) Binary Horse Herd Optimization Algorithm (BHOA)
+shared implementation Binary Horse Herd Optimization Algorithm (BHOA)
 dengan dua saklar komponen untuk studi ablasi faktorial 2x2:
 
     V0 = BHOA dasar            (LF=off, LS=off)
@@ -9,9 +9,9 @@ dengan dua saklar komponen untuk studi ablasi faktorial 2x2:
     V2 = BHOA + Local Search   (LF=off, LS=on)
     V3 = BHOA + LF + LS        (LF=on,  LS=on)   ~ BinHOA (Elmanakhly dkk., 2022)
 
-Prinsip pengendalian eksperimen yang diterapkan (sesuai Bab III proposal):
+Prinsip pengendalian eksperimen yang diterapkan :
   1. Satu kode dasar; saklar LF/LS hanya mengaktifkan operator terkait.
-  2. Anggaran evaluasi fitness (jumlah *permintaan* fitness) setara untuk semua varian.
+  2. Anggaran evaluasi fitness (jumlah permintaan fitness) setara untuk semua varian.
      Setiap permintaan -- termasuk cache hit -- mengurangi anggaran satu unit.
      Operator dihentikan segera saat anggaran habis (BudgetExhausted).
   3. Populasi awal identik antar-varian untuk seed yang sama.
@@ -21,10 +21,6 @@ Prinsip pengendalian eksperimen yang diterapkan (sesuai Bab III proposal):
      bukan nomor iterasi, sehingga varian dengan LS (yang memakai evaluasi ekstra)
      tidak memperoleh jadwal yang berbeda.
 
-CATATAN PENTING (Lampiran A proposal):
-  Nilai default koefisien HOA, skala LF, dan detail LS di bawah ini adalah nilai AWAL
-  untuk pilot. Seluruhnya WAJIB dicocokkan dengan persamaan/tabel pada sumber primer
-  [MiarNaeimi dkk., 2021] dan [Elmanakhly dkk., 2022] lalu dikunci sebelum eksperimen utama.
 """
 from __future__ import annotations
 
