@@ -1,7 +1,7 @@
 """
 stats_analysis.py
 =================
-Analisis statistik studi ablasi (Bab III 3.10 proposal), dijalankan terpisah per dataset.
+Analisis statistik studi ablasi, dijalankan terpisah per dataset.
 
   Skor kualitas pencarian  : Y = -fitness  (lebih besar = lebih baik)
   Efek LF tanpa LS         : Delta0_r = Y(V1,r) - Y(V0,r)
